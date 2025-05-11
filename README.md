@@ -13,3 +13,5 @@ Veřejné profily:<br/>
 76561198058564905<br/>
 76561198080947810<br/>
 76561198053298539<br/>
+<br/>
+app.py obsahuje doporučovací logiku a na začátku bere autorův Steam API klíč ze souboru .env<br/>
