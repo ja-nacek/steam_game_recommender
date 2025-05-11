@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  --primary-color: #3498db;
+  --primary-hover: #2980b9;
+  --secondary-color: #2c3e50;
+  --background-color: #f4f4f9;
+  --card-bg: #ffffff;
+  --text-color: #333333;
+  --error-color: #e74c3c;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--secondary-color);
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+label {
+  flex: 0 0 100%;
+  font-weight: 500;
+}
+
+input[type="number"] {
+  flex: 1 1 auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+}
+
+.info {
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.info-list {
+  font-size: 0.9em;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.info-list li + li {
+  margin-top: 5px;
+}
+
+.recommendations {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+  padding: 0;
+}
+
+.game-card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.game-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  color: var(--secondary-color);
+}
+
+.game-card p {
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+.game-card a {
+  margin-top: 10px;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.game-card a:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+.no-recs {
+  text-align: center;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+.game-header {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  .container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  label {
+    margin-bottom: 0;
+  }
+
+  input[type="number"],
+  button {
+    font-size: 1rem;
+    width: 100%;
+    min-height: 44px;
+    box-sizing: border-box;
+  }
+
+  input[type="number"] {
+    padding: 12px 10px;
+  }
+
+  button {
+    padding: 12px 20px;
+  }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STEAM GAME RECOMMENDER</title>
+  <link
+    rel="stylesheet" href="../static/style.css"
+  />
+</head>
+<body>
+  <div class="container">
+    <h1>STEAM GAME RECOMMENDER</h1>
+
+    <form method="POST">
+      <label for="steam_id">Vložte své Steam ID:</label>
+      <input type="number" name="steam_id" id="steam_id" required inputmode="numeric" pattern="[0-9]*" placeholder="Např. 756421..." />
+      <button type="submit">Doporuč mi hry!</button>
+    </form>
+
+    <p class="info">Kde mohu najít své Steam ID?</p>
+    <ul class="info-list">
+      <li>Použij např. stránku <a href="https://tradeit.gg/steam-id-finder" target="_blank" rel="noopener noreferrer">tradeit.gg/steam-id-finder</a> kam vložíš odkaz na svůj Steam profil.
+      </li>
+    </ul>
+
+    {% if error %}
+      <script type="text/javascript">
+        alert({{ error | tojson }});
+      </script>
+    {% endif %}
+
+    {% if recommendations %}
+      <h2>Doporučené hry:</h2>
+      <ul class="recommendations">
+        {% for game in recommendations %}
+          <li class="game-card">
+            <img
+              src="{{ game.header_image_url }}"
+              alt="Obrázek hry: {{ game.name }}"
+              class="game-header"
+            />
+            <h3>{{ game.name }}</h3>
+            <a href="{{ game.url }}" target="_blank">Zobrazit na Steamu</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p class="no-recs">
+        Zatím žádné doporučení. Dopiš své Steam ID a klikni na tlačítko!
+      </p>
+    {% endif %}
+  </div>
+</body>
+</html>
