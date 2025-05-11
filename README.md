@@ -1,15 +1,15 @@
 # steam_game_recommender
-Pro funkci je nutné mít nainstalované následující balíčky:
-Flask
-python-dotenv
-pandas
-numpy
-scikit-learn
-steam-web-api
+Pro funkci je nutné mít nainstalované následující balíčky:<br/>
+Flask<br/>
+python-dotenv<br/>
+pandas<br/>
+numpy<br/>
+scikit-learn<br/>
+steam-web-api<br/>
 
-Příklad Steam IDs na vyzkoušení:
-Soukromý profil: 76561199176845392
-Veřejné profily:
-76561198058564905
-76561198080947810
-76561198053298539
+Příklad Steam IDs na vyzkoušení:<br/>
+Soukromý profil: 76561199176845392<br/>
+Veřejné profily:<br/>
+76561198058564905<br/>
+76561198080947810<br/>
+76561198053298539<br/>
